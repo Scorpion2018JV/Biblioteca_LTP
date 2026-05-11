@@ -25,6 +25,12 @@ let novoGenero;
 let novoAnoPub;
 let novoNumPaginas;
 
+//Opção 4
+
+let auxiliar;
+let contagem;
+let media;
+
 while(controleSair) {
     console.log('--- Biblioteca ---')
     console.log('1 - Cadastrar livro')
@@ -124,7 +130,23 @@ while(controleSair) {
             break;
 
         case 4:
+            if (livros.length === 0) {
+                console.log('Não há livros cadastrados.\n')
+                break
+            }
 
+            auxiliar = new Livro('', '', '', 0, 0)
+
+            contagem = auxiliar.contarPorGenero(livros)
+            media = auxiliar.mediaNumPaginas(livros)
+
+            console.log('\nQuantidade de livros por gênero:')
+
+            for (let genero in contagem) {
+                console.log(`${genero}: ${contagem[genero]}`)
+            }
+
+            console.log(`\nMédia de páginas: ${media}\n`)
             break;
         
         case 0:
