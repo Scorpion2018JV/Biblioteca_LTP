@@ -39,7 +39,7 @@ while(controleSair) {
     console.log('4 - Estatísticas')
     console.log('0 - Sair')
 
-    opcao = parseInt(prompt('\nDigite número um correspondente a uma opção: '))
+    opcao = parseInt(prompt('Digite número um correspondente a uma opção: '))
 
     if(isNaN(opcao)) {
         console.log('\nVocê deve digitar apenas números, tente novamente.\n')
@@ -90,7 +90,7 @@ while(controleSair) {
                 console.log(`${indice}. ${livro.getInfo()}`)
             })
 
-            indice = parseInt(prompt('\nDigite o índice do livro que deseja alterar: '))
+            indice = parseInt(prompt('Digite o índice do livro que deseja alterar: '))
 
             if (isNaN(indice) || indice < 0 || indice >= livros.length) {
                 console.log('Índice inválido!\n')
